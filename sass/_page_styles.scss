@@ -37,6 +37,7 @@
 	width: 188px;
 	height: auto;
 	display: block;
+	user-select: none;
 	@include res(l){
 		width: 130px;
 	}
@@ -50,6 +51,7 @@
 	width: 100%;
 	max-width: 500px;
 	flex-shrink: 1;
+	user-select: none;
 	@include res(m){
 		display: none;
 	}
@@ -137,11 +139,13 @@
 .screen{
 	position: relative;
 	width: 100%;
-	border: 2px solid rgba(255,255,255,1);
+	border: 2px solid rgba(255,255,255,0.7);
 	border-radius: 8%/11%;
 	padding: 5.4% 5%;
 	overflow: hidden;
 	margin-bottom: -5.7%;
+	user-select: none;
+	pointer-events: none;
 
 	&__img{
 		display: block;
