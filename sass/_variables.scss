@@ -1,0 +1,20 @@
+$breakpoints: (
+	'xl': (max-width: 1400px),
+	'l': (max-width: 1024px),
+	'm': (max-width: 768px),
+	's': (max-width: 680px),
+	'xs': (max-width: 480px)
+);
+
+@mixin res($breakpoint) {
+	@media #{inspect(map-get($breakpoints, $breakpoint))} {
+		@content;
+	}
+}
+
+$font: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+
+$container_width: 1228px;
+
+$yellow: #ffae00;
+$gradient: linear-gradient( to right, rgb(29,34,74) 0%, rgb(44,52,133) 100%);

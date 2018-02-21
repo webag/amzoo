@@ -1,0 +1,178 @@
+.container{
+	width: $container_width;
+	max-width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0 14px;
+}
+
+
+//s-head
+.s-header{
+	background: $gradient;
+	color: #FFF;
+	overflow: hidden;
+}
+
+.top-panel{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: 55px;
+	@include res(xl){
+		padding-top: 40px;
+	}
+	@include res(l){
+		padding-top: 30px;
+	}
+	@include res(xs){
+		flex-direction: column;
+		justify-content: center;
+	}
+}
+
+.top-logo{
+	flex-shrink: 0;
+	margin-right: 30px;
+	width: 188px;
+	height: auto;
+	display: block;
+	@include res(l){
+		width: 130px;
+	}
+	@include res(xs){
+		margin-right: 0;
+		margin-bottom: 14px;
+	}
+}
+
+.top-nav{
+	width: 100%;
+	max-width: 500px;
+	flex-shrink: 1;
+	@include res(m){
+		display: none;
+	}
+
+	ul{
+		display: flex;
+		justify-content: space-between;
+		list-style: none;
+
+		li{
+
+			a{
+				padding: 10px;
+				transition: all 0.3s ease;
+
+				&:hover,&:focus{
+					outline: none;
+					color: $yellow;
+				}
+			}
+		}
+	}
+}
+
+.top-btn{
+	margin-left: 30px;
+	@include res(xs){
+		margin-left: 0;
+	}
+}
+
+
+.header-main{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: 80px;
+	@include res(l){
+		padding-top: 60px;
+	}
+	@include res(m){
+		flex-wrap: wrap;
+	}
+
+	&__text{
+		width: 355px;
+		max-width: 100%;
+		flex-shrink: 0;
+		padding-right: 20px;
+		margin-top: -80px;
+		@include res(m){
+			text-align: center;
+			padding-right: 0;
+			margin: 0 auto 40px;
+		}
+	}
+
+	&__img{
+		display: block;
+		flex-shrink: 1;
+		@include res(m){
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	&__title{
+		font-weight: bold;
+		font-size: 30px;
+		line-height: 1.2;
+		@include res(xs){
+			font-size: 24px;
+		}
+	}
+
+	&__subtitle{
+		font-size: 30px;
+		font-weight: 100;
+		@include res(xs){
+			font-size: 24px;
+		}
+	}
+}
+
+.screen{
+	position: relative;
+	width: 100%;
+	border: 2px solid rgba(255,255,255,1);
+	border-radius: 8%/11%;
+	padding: 5.4% 5%;
+	overflow: hidden;
+	margin-bottom: -5.7%;
+
+	&__img{
+		display: block;
+		width: 100%;
+		height: auto;
+	}
+
+	&:before{
+		content: '';
+		width: 8px;
+		height: 8px;
+		position: absolute;
+		z-index: 2;
+		left: 0;
+		right: 0;
+		top: 20px;
+		margin: auto;
+		background: transparentize(#FFF,0.9);
+		border-radius: 50%;
+	}
+
+	&:after{
+		content: '';
+		width: 40%;
+		height: 100%;
+		background: linear-gradient(to bottom,rgba(255,255,255,0.1),transparent);
+		position: absolute;
+		top: 0;
+		right: 0;
+		transform-origin: right top;
+		transform: skewX(30deg);
+	}
+}
+//s-head

@@ -1,0 +1,23 @@
+.modal{
+	display: none;
+	width: 500px;
+	max-width: 100%;
+	will-change: transform,opacity;
+	overflow: visible !important;
+}
+
+.fancybox-slide--current {
+	.modal {
+
+	}
+}
+
+.fancybox-is-closing{
+	.modal {
+
+	}
+}
+
+.fancybox-bg{
+	background: #8c8e9a;
+}
