@@ -1,10 +1,11 @@
 body{
+	background: $bg-color;
 	font-family: $font;
 	font-size: 16px;
 	font-weight: 300;
 	line-height: 1.2;
-	color: #353434;
-	@include res(m){
+	color: #1d1d1d;
+	@include res(l){
 		font-size: 14px;
 	}
 }
@@ -20,4 +21,25 @@ a{
 
 ::-moz-selection {
 	background: $yellow;
+}
+
+h2,.h2{
+	font-size: 35px;
+	font-weight: 300;
+	line-height: 1.2;
+	@include res(xs){
+		font-size: 30px;
+	}
+}
+
+h3,.h3{
+	font-weight: bold;
+	font-size: 21px;
+	line-height: 1.1;
+	@include res(xl){
+		font-size: 19px;
+	}
+	@include res(l){
+		font-size: 17px;
+	}
 }

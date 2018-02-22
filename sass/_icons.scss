@@ -1,0 +1,55 @@
+@font-face {
+	font-family: 'amzoo';
+	src:
+		url('../fonts/amzoo.ttf?ny48hl') format('truetype'),
+		url('../fonts/amzoo.woff?ny48hl') format('woff'),
+		url('../fonts/amzoo.svg?ny48hl#amzoo') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+i {
+	/* use !important to prevent issues with browser extensions that change fonts */
+	font-family: 'amzoo' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.i-catalog:before {
+	content: "\e900";
+}
+.i-down:before {
+	content: "\e901";
+}
+.i-hare:before {
+	content: "\e902";
+}
+.i-left:before {
+	content: "\e903";
+}
+.i-more:before {
+	content: "\e904";
+}
+.i-right:before {
+	content: "\e905";
+}
+.i-sort:before {
+	content: "\e906";
+}
+.i-star:before {
+	content: "\e907";
+}
+.i-up:before {
+	content: "\e908";
+}
+.i-updown:before {
+	content: "\e909";
+}
