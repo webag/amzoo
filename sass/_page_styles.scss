@@ -299,6 +299,7 @@
 			&.active{
 				background: $violet;
 				color: #FFF;
+				pointer-events: none;
 			}
 		}
 	}

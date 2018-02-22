@@ -1203,7 +1203,8 @@ button::-moz-focus-inner {
         color: #FFF; }
       .cats__list li.active {
         background: #444b99;
-        color: #FFF; }
+        color: #FFF;
+        pointer-events: none; }
 
 .table__content {
   position: relative;
