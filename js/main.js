@@ -2,7 +2,7 @@
  fancybox BEGIN
  ***********************/
 $(function () {
-	$('.table-item').on('click',function () {
+	$(document).on('click','.table-item',function () {
 		var modal = $(this).find('.modal');
 		$.fancybox.open({
 			src  : modal,
@@ -158,42 +158,117 @@ table END
 /***********************
 Sorting BEGIN
 ***********************/
-function sortTable(table,column,type) {
-	var tbody = grid.getElementsByTagName('tbody')[0];
-
-	// Составить массив из TR
-	var rowsArray = [].slice.call(tbody.rows);
-
-	// определить функцию сравнения, в зависимости от типа
+function sortTable(table,col,sortType,asc) {
+	var items = table.find('.table-item');
+	var table_content = table.find('.table__content');
 	var compare;
 
-	switch (type) {
+	switch (sortType) {
+
 		case 'number':
-			compare = function(rowA, rowB) {
-				return rowA.cells[colNum].innerHTML - rowB.cells[colNum].innerHTML;
+			compare = function(a, b) {
+				var an = parseInt($(a).data(col));
+				var bn = parseInt($(b).data(col));
+				if (asc){
+					return an - bn;
+				} else {
+					return bn - an;
+				}
 			};
 			break;
+
 		case 'string':
-			compare = function(rowA, rowB) {
-				return rowA.cells[colNum].innerHTML > rowB.cells[colNum].innerHTML;
+			compare = function(a, b) {
+				var an = $(a).data(col).toLowerCase();
+				var bn = $(b).data(col).toLowerCase();
+				if (asc){
+					return (an > bn) ? 1 : -1;
+				} else {
+					return (an < bn) ? 1 : -1;
+				}
 			};
 			break;
 	}
 
-	// сортировать
-	rowsArray.sort(compare);
+	items.sort(compare);
+	table_content.empty().append(items);
 
-	// Убрать tbody из большого DOM документа для лучшей производительности
-	grid.removeChild(tbody);
+	updateAfterSort(table.parents('.main-block'));
+}
 
-	// добавить результат в нужном порядке в TBODY
-	// они автоматически будут убраны со старых мест и вставлены в правильном порядке
-	for (var i = 0; i < rowsArray.length; i++) {
-		tbody.appendChild(rowsArray[i]);
+
+// обновление видимых классов после сортировки, учитывая выбранную категорию и кол-во уже открытых эелментов
+function updateAfterSort(block) {
+	var activeCat = block.find('.cats__list li.active').data('cat');
+	var items;
+	if (activeCat !== "*"){
+		items = block.find('.table-item').filter('[data-cat="'+activeCat+'"]');
+	} else {
+		items = block.find('.table-item');
 	}
+	var visibleCount = items.not('.hidden').length;
 
-	grid.appendChild(tbody);
+	items.removeClass('hidden');
+	items.filter(function (index) {
+		return index > visibleCount-1;
+	}).addClass('hidden');
+}
 
+
+$(function($){
+	$('[data-sort]').on('click',function () {
+		var sortType = $(this).data('sort');
+		var asc = $(this).data('asc');
+		var table = $(this).parents('.table');
+		var col = $(this).data('col');
+
+		sortTable(table,col,sortType,asc);
+
+		if (asc){
+			$(this).data('asc',false)
+		} else {
+			$(this).data('asc',true)
+		}
+
+		var thisSortsTabs = $(this).parents('.table__head').find('.table__col');
+		thisSortsTabs.removeClass('active');
+		$(this).addClass('active');
+
+		//сброс языкового селекта
+		table.find('[data-language]').prop('selectedIndex',0);
+		table.find('[data-language]').niceSelect('update');
+	});
+
+
+	$('[data-language]').on('change',function () {
+		var language = $(this).val();
+		var table = $(this).parents('.table');
+
+		sortTableLanguage(table,language);
+		var thisSortsTabs = $(this).parents('.table__head').find('.table__col');
+		thisSortsTabs.removeClass('active');
+	})
+});
+
+
+function sortTableLanguage(table,language) {
+	language = language.toLowerCase();
+	var items = table.find('.table-item');
+	var table_content = table.find('.table__content');
+	var itemLanguages;
+	var tmp;
+
+	items.each(function () {
+		if ($(this).data('language').length){
+			itemLanguages = $(this).data('language').toLowerCase();
+		}
+		if (itemLanguages.indexOf(language) > -1){
+			tmp = $(this).detach();
+			tmp.prependTo(table_content);
+		}
+	});
+
+	updateAfterSort(table.parents('.main-block'));
 }
 /***********************
 Sorting END

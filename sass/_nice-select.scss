@@ -99,6 +99,9 @@ $arrow_color: $gray !default;
 		transition: all 0.2s ease;
 		box-shadow: 0 0 5px 0 rgba(0,0,0,0.2);
 		width: 200px;
+		@include res(m){
+			width: 140px;
+		}
 		&:hover .option:not(:hover) {
 			background-color: transparent !important;
 		}

@@ -205,6 +205,9 @@
 //s-main
 .s-main{
 	padding: 40px 0;
+	@include res(m){
+		padding: 20px 0;
+	}
 
 	&__title{
 		text-align: center;
@@ -334,6 +337,11 @@
 	white-space: nowrap;
 	height: 50px;
 	user-select: none;
+	@include res(m){
+		height: auto;
+		justify-content: flex-start;
+		flex-wrap: wrap;
+	}
 
 	.i-sort{
 		font-size: 14px;
@@ -347,18 +355,35 @@
 	.table__col{
 		display: flex;
 		align-items: center;
+		@include res(m){
+			width: auto;
+			padding: 10px;
+			margin-right: 10px;
+			display: none;
+		}
 	}
 
 	.table__col[data-sort]{
 		cursor: pointer;
 		transition: color 0.3s ease;
+		@include res(m){
+			display: flex;
+		}
 		&:hover{
+			color: $yellow;
+		}
+		&.active{
 			color: $yellow;
 		}
 	}
 	.table__col--language{
 		.style-select{
 			margin-left: 8px;
+		}
+		@include res(m){
+			display: flex;
+			order: 10;
+			//margin-left: auto;
 		}
 	}
 }
@@ -376,6 +401,9 @@
 	}
 	&--name{
 		width: 50%;
+		.stars{
+			justify-content: center;
+		}
 	}
 	&--type,&--description{
 		width: 40%;
@@ -389,13 +417,40 @@
 	&--for{
 		width: 22%;
 		text-align: center;
+		justify-content: center;
 	}
 	&--price{
 		width: 30%;
 		text-align: center;
+		justify-content: center;
 	}
 }
 //table-cols
+
+
+//table-content
+.table__content{
+	.table__col{
+		@include res(m){
+			width: 100%;
+			padding: 0;
+			margin-bottom: 10px;
+		}
+
+		&--first{
+			@include res(m){
+				width: 93px;
+			}
+		}
+	}
+
+	.flags{
+		@include res(m){
+			justify-content: center;
+		}
+	}
+}
+//table-content
 
 
 //table-item
@@ -406,6 +461,12 @@
 	border-top: 1px solid #edf1f8;
 	cursor: pointer;
 	transition: background-color 0.2s ease;
+	@include res(m){
+		padding: 10px 15px 0 15px;
+		flex-direction: column;
+		justify-content: center;
+		text-align: center;
+	}
 	
 	&:hover{
 		background-color: #edf1f8;
@@ -457,6 +518,9 @@
 		line-height: 1.4;
 		border-radius: 2px;
 		box-shadow: 0 0 5px 0 rgba(0,0,0,0.2);
+		@include res(m){
+			width: 140px;
+		}
 
 		&:before{
 			content: '';

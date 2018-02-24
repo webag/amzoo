@@ -47,8 +47,8 @@
 				<ul>
 					<li><a href="#courses" class="scrollto">Courses </a></li>
 					<li><a href="#software" class="scrollto">Software</a></li>
-					<li><a href="#" class="scrollto">Consultants</a></li>
-					<li><a href="#" class="scrollto">Services</a></li>
+					<li><a href="#consultants" class="scrollto">Consultants</a></li>
+					<li><a href="#services" class="scrollto">Services</a></li>
 				</ul>
 			</nav>
 			<a href="#" class="btn top-btn">Share your website <i class="i-hare"></i></a>
@@ -91,26 +91,28 @@
 				<div class="table">
 					<div class="table__head">
 						<div class="table__col table__col--first"><i class="i-sort"></i>Sort by:</div>
-						<div class="table__col table__col--name" data-sort="name">Name <i class="i-updown"></i></div>
-						<div class="table__col table__col--type" data-sort="simple">Type <i class="i-updown"></i></div>
+						<div class="table__col table__col--name" data-col="name" data-sort="string" data-asc="true">Name <i class="i-updown"></i></div>
+						<div class="table__col table__col--type" data-col="type" data-sort="string" data-asc="true">Type <i class="i-updown"></i></div>
 						<div class="table__col table__col--language">
 							Language
-							<select class="style-select" title="select language">
-								<option>Default</option>
-								<option value="1">English</option>
-								<option value="2">Chinesse-Chinesse</option>
+							<select class="style-select" title="select language" data-language>
+								<option disabled selected>Default</option>
+								<option>English</option>
+								<option>Chinesse</option>
+								<option>Germany</option>
+								<option>Russian</option>
 							</select>
 						</div>
-						<div class="table__col table__col--marketplace" data-sort="simple">Marketplace <i class="i-updown"></i></div>
+						<div class="table__col table__col--marketplace">Marketplace</div>
 					</div>
 					<div class="table__content">
 						<!--item-->
-						<div class="table-item" data-cat="Private Label" data-name="Abcd">
+						<div class="table-item" data-cat="Private Label" data-name="Baa" data-type="type c" data-language="english">
 							<div class="table__col table__col--first">
 								<img src="img/thumb.jpg" alt="thumb" class="table-item__thumb">
 							</div>
 							<div class="table__col table__col--name">
-								<p class="h3">Abcd</p>
+								<p class="h3">Baa</p>
 								<div class="stars">
 									<i class="i-star i-star--full"></i>
 									<i class="i-star i-star--full"></i>
@@ -119,11 +121,137 @@
 									<i class="i-star"></i>
 								</div>
 							</div>
-							<div class="table__col table__col--type">Type of the Resource</div>
+							<div class="table__col table__col--type">type c</div>
+							<div class="table__col table__col--language">English</div>
+							<div class="table__col table__col--marketplace">
+								<div class="flags">
+									<img src="img/flags/china.jpg" alt="China" title="China">
+									<img src="img/flags/greece.jpg" alt="Greece" title="Greece">
+									<img src="img/flags/spain.jpg" alt="Spain" title="Spain">
+									<img src="img/flags/sweden.jpg" alt="Sweden" title="Sweden">
+									<img src="img/flags/united-kingdom.jpg" alt="United-kingdom" title="United-kingdom">
+									<img src="img/flags/russia.jpg" alt="Russia" title="Russia">
+								</div>
+							</div>
+							<div class="modal">
+								<div class="modal__wrap">
+									<div class="modal__thumb">
+										<img src="img/thumb-modal.jpg" alt="thumb">
+									</div>
+									<div class="modal__content">
+										<p class="modal__title">Resource Name</p>
+										<div class="stars">
+											<i class="i-star i-star--full"></i>
+											<i class="i-star i-star--full"></i>
+											<i class="i-star i-star--full"></i>
+											<i class="i-star"></i>
+											<i class="i-star"></i>
+										</div>
+										<p class="modal__type">Type of the Resource</p>
+										<p class="modal__descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectet</p>
+										<div class="modal__param">
+											<span>Languages:</span>
+											<div>English, Chinesse, Franch, Russian</div>
+										</div>
+										<div class="modal__param">
+											<span>Marketplace:</span>
+											<div class="flags">
+												<img src="img/flags/china.jpg" alt="China" title="China">
+												<img src="img/flags/greece.jpg" alt="Greece" title="Greece">
+												<img src="img/flags/spain.jpg" alt="Spain" title="Spain">
+												<img src="img/flags/sweden.jpg" alt="Sweden" title="Sweden">
+												<img src="img/flags/united-kingdom.jpg" alt="United-kingdom" title="United-kingdom">
+												<img src="img/flags/russia.jpg" alt="Russia" title="Russia">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--item end-->
+						<!--item-->
+						<div class="table-item" data-cat="Retail Arbitrage" data-name="bbb" data-type="type b" data-language="english,chinesse">
+							<div class="table__col table__col--first">
+								<img src="img/thumb.jpg" alt="thumb" class="table-item__thumb">
+							</div>
+							<div class="table__col table__col--name">
+								<p class="h3">bbb</p>
+								<div class="stars">
+									<i class="i-star i-star--full"></i>
+									<i class="i-star i-star--full"></i>
+									<i class="i-star i-star--full"></i>
+									<i class="i-star"></i>
+									<i class="i-star"></i>
+								</div>
+							</div>
+							<div class="table__col table__col--type">type b</div>
+							<div class="table__col table__col--language">English, Chinesse</div>
+							<div class="table__col table__col--marketplace">
+								<div class="flags">
+									<img src="img/flags/china.jpg" alt="China" title="China">
+									<img src="img/flags/greece.jpg" alt="Greece" title="Greece">
+									<img src="img/flags/spain.jpg" alt="Spain" title="Spain">
+									<img src="img/flags/sweden.jpg" alt="Sweden" title="Sweden">
+									<img src="img/flags/united-kingdom.jpg" alt="United-kingdom" title="United-kingdom">
+									<img src="img/flags/russia.jpg" alt="Russia" title="Russia">
+								</div>
+							</div>
+						</div>
+						<!--item end-->
+						<!--item-->
+						<div class="table-item" data-cat="Retail Arbitrage" data-name="ccc" data-type="type a" data-language="english,chinesse,germany">
+							<div class="table__col table__col--first">
+								<img src="img/thumb.jpg" alt="thumb" class="table-item__thumb">
+							</div>
+							<div class="table__col table__col--name">
+								<p class="h3">ccc</p>
+								<div class="stars">
+									<i class="i-star i-star--full"></i>
+									<i class="i-star i-star--full"></i>
+									<i class="i-star i-star--full"></i>
+									<i class="i-star"></i>
+									<i class="i-star"></i>
+								</div>
+							</div>
+							<div class="table__col table__col--type">type a</div>
 							<div class="table__col table__col--language">English, Chinesse and
 								<span class="has-sub">
 									<span>more..</span>
-									<span class="has-sub__sub">English, Chinesse, English, Chinesse, English, Chinesse</span>
+									<span class="has-sub__sub">Germany</span>
+								</span>
+							</div>
+							<div class="table__col table__col--marketplace">
+								<div class="flags">
+									<img src="img/flags/china.jpg" alt="China" title="China">
+									<img src="img/flags/greece.jpg" alt="Greece" title="Greece">
+									<img src="img/flags/spain.jpg" alt="Spain" title="Spain">
+									<img src="img/flags/sweden.jpg" alt="Sweden" title="Sweden">
+									<img src="img/flags/united-kingdom.jpg" alt="United-kingdom" title="United-kingdom">
+									<img src="img/flags/russia.jpg" alt="Russia" title="Russia">
+								</div>
+							</div>
+						</div>
+						<!--item end-->
+						<!--item-->
+						<div class="table-item" data-cat="Private Label" data-name="aaa" data-type="type d" data-language="english,chinesse,germany,russian">
+							<div class="table__col table__col--first">
+								<img src="img/thumb.jpg" alt="thumb" class="table-item__thumb">
+							</div>
+							<div class="table__col table__col--name">
+								<p class="h3">aaa</p>
+								<div class="stars">
+									<i class="i-star i-star--full"></i>
+									<i class="i-star i-star--full"></i>
+									<i class="i-star i-star--full"></i>
+									<i class="i-star"></i>
+									<i class="i-star"></i>
+								</div>
+							</div>
+							<div class="table__col table__col--type">type d</div>
+							<div class="table__col table__col--language">English, Chinesse and
+								<span class="has-sub">
+									<span>more..</span>
+									<span class="has-sub__sub">Germany, Russian</span>
 								</span>
 							</div>
 							<div class="table__col table__col--marketplace">
@@ -173,12 +301,12 @@
 						</div>
 						<!--item end-->
 						<!--item-->
-						<div class="table-item" data-cat="Retail Arbitrage" data-name="Bcdf">
+						<div class="table-item" data-cat="Private Label" data-name="aaa" data-type="type c" data-language="english">
 							<div class="table__col table__col--first">
 								<img src="img/thumb.jpg" alt="thumb" class="table-item__thumb">
 							</div>
 							<div class="table__col table__col--name">
-								<p class="h3">Bcdf</p>
+								<p class="h3">aaa</p>
 								<div class="stars">
 									<i class="i-star i-star--full"></i>
 									<i class="i-star i-star--full"></i>
@@ -187,11 +315,103 @@
 									<i class="i-star"></i>
 								</div>
 							</div>
-							<div class="table__col table__col--type">Type of the Resource</div>
+							<div class="table__col table__col--type">type c</div>
+							<div class="table__col table__col--language">English</div>
+							<div class="table__col table__col--marketplace">
+								<div class="flags">
+									<img src="img/flags/china.jpg" alt="China" title="China">
+									<img src="img/flags/greece.jpg" alt="Greece" title="Greece">
+									<img src="img/flags/spain.jpg" alt="Spain" title="Spain">
+									<img src="img/flags/sweden.jpg" alt="Sweden" title="Sweden">
+									<img src="img/flags/united-kingdom.jpg" alt="United-kingdom" title="United-kingdom">
+									<img src="img/flags/russia.jpg" alt="Russia" title="Russia">
+								</div>
+							</div>
+							<div class="modal">
+								<div class="modal__wrap">
+									<div class="modal__thumb">
+										<img src="img/thumb-modal.jpg" alt="thumb">
+									</div>
+									<div class="modal__content">
+										<p class="modal__title">Resource Name</p>
+										<div class="stars">
+											<i class="i-star i-star--full"></i>
+											<i class="i-star i-star--full"></i>
+											<i class="i-star i-star--full"></i>
+											<i class="i-star"></i>
+											<i class="i-star"></i>
+										</div>
+										<p class="modal__type">Type of the Resource</p>
+										<p class="modal__descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectet</p>
+										<div class="modal__param">
+											<span>Languages:</span>
+											<div>English, Chinesse, Franch, Russian</div>
+										</div>
+										<div class="modal__param">
+											<span>Marketplace:</span>
+											<div class="flags">
+												<img src="img/flags/china.jpg" alt="China" title="China">
+												<img src="img/flags/greece.jpg" alt="Greece" title="Greece">
+												<img src="img/flags/spain.jpg" alt="Spain" title="Spain">
+												<img src="img/flags/sweden.jpg" alt="Sweden" title="Sweden">
+												<img src="img/flags/united-kingdom.jpg" alt="United-kingdom" title="United-kingdom">
+												<img src="img/flags/russia.jpg" alt="Russia" title="Russia">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--item end-->
+						<!--item-->
+						<div class="table-item" data-cat="Retail Arbitrage" data-name="bbb" data-type="type b" data-language="english,chinesse">
+							<div class="table__col table__col--first">
+								<img src="img/thumb.jpg" alt="thumb" class="table-item__thumb">
+							</div>
+							<div class="table__col table__col--name">
+								<p class="h3">bbb</p>
+								<div class="stars">
+									<i class="i-star i-star--full"></i>
+									<i class="i-star i-star--full"></i>
+									<i class="i-star i-star--full"></i>
+									<i class="i-star"></i>
+									<i class="i-star"></i>
+								</div>
+							</div>
+							<div class="table__col table__col--type">type b</div>
+							<div class="table__col table__col--language">English, Chinesse</div>
+							<div class="table__col table__col--marketplace">
+								<div class="flags">
+									<img src="img/flags/china.jpg" alt="China" title="China">
+									<img src="img/flags/greece.jpg" alt="Greece" title="Greece">
+									<img src="img/flags/spain.jpg" alt="Spain" title="Spain">
+									<img src="img/flags/sweden.jpg" alt="Sweden" title="Sweden">
+									<img src="img/flags/united-kingdom.jpg" alt="United-kingdom" title="United-kingdom">
+									<img src="img/flags/russia.jpg" alt="Russia" title="Russia">
+								</div>
+							</div>
+						</div>
+						<!--item end-->
+						<!--item-->
+						<div class="table-item" data-cat="Retail Arbitrage" data-name="ccc" data-type="type a" data-language="english,chinesse,germany">
+							<div class="table__col table__col--first">
+								<img src="img/thumb.jpg" alt="thumb" class="table-item__thumb">
+							</div>
+							<div class="table__col table__col--name">
+								<p class="h3">ccc</p>
+								<div class="stars">
+									<i class="i-star i-star--full"></i>
+									<i class="i-star i-star--full"></i>
+									<i class="i-star i-star--full"></i>
+									<i class="i-star"></i>
+									<i class="i-star"></i>
+								</div>
+							</div>
+							<div class="table__col table__col--type">type a</div>
 							<div class="table__col table__col--language">English, Chinesse and
 								<span class="has-sub">
 									<span>more..</span>
-									<span class="has-sub__sub">English, Chinesse, English, Chinesse, English, Chinesse</span>
+									<span class="has-sub__sub">Germany</span>
 								</span>
 							</div>
 							<div class="table__col table__col--marketplace">
@@ -207,12 +427,12 @@
 						</div>
 						<!--item end-->
 						<!--item-->
-						<div class="table-item" data-cat="Retail Arbitrage" data-name="Frgh">
+						<div class="table-item" data-cat="Private Label" data-name="aaa" data-type="type d" data-language="english,chinesse,germany,russian">
 							<div class="table__col table__col--first">
 								<img src="img/thumb.jpg" alt="thumb" class="table-item__thumb">
 							</div>
 							<div class="table__col table__col--name">
-								<p class="h3">Frgh</p>
+								<p class="h3">aaa</p>
 								<div class="stars">
 									<i class="i-star i-star--full"></i>
 									<i class="i-star i-star--full"></i>
@@ -221,11 +441,11 @@
 									<i class="i-star"></i>
 								</div>
 							</div>
-							<div class="table__col table__col--type">Type of the Resource</div>
+							<div class="table__col table__col--type">type d</div>
 							<div class="table__col table__col--language">English, Chinesse and
 								<span class="has-sub">
 									<span>more..</span>
-									<span class="has-sub__sub">English, Chinesse, English, Chinesse, English, Chinesse</span>
+									<span class="has-sub__sub">Germany, Russian</span>
 								</span>
 							</div>
 							<div class="table__col table__col--marketplace">
@@ -238,276 +458,38 @@
 									<img src="img/flags/russia.jpg" alt="Russia" title="Russia">
 								</div>
 							</div>
-						</div>
-						<!--item end-->
-						<!--item-->
-						<div class="table-item" data-cat="Private Label">
-							<div class="table__col table__col--first">
-								<img src="img/thumb.jpg" alt="thumb" class="table-item__thumb">
-							</div>
-							<div class="table__col table__col--name">
-								<p class="h3">Resource Name Private Label</p>
-								<div class="stars">
-									<i class="i-star i-star--full"></i>
-									<i class="i-star i-star--full"></i>
-									<i class="i-star i-star--full"></i>
-									<i class="i-star"></i>
-									<i class="i-star"></i>
-								</div>
-							</div>
-							<div class="table__col table__col--type">Type of the Resource</div>
-							<div class="table__col table__col--language">English, Chinesse and
-								<span class="has-sub">
-									<span>more..</span>
-									<span class="has-sub__sub">English, Chinesse, English, Chinesse, English, Chinesse</span>
-								</span>
-							</div>
-							<div class="table__col table__col--marketplace">
-								<div class="flags">
-									<img src="img/flags/china.jpg" alt="China" title="China">
-									<img src="img/flags/greece.jpg" alt="Greece" title="Greece">
-									<img src="img/flags/spain.jpg" alt="Spain" title="Spain">
-									<img src="img/flags/sweden.jpg" alt="Sweden" title="Sweden">
-									<img src="img/flags/united-kingdom.jpg" alt="United-kingdom" title="United-kingdom">
-									<img src="img/flags/russia.jpg" alt="Russia" title="Russia">
-								</div>
-							</div>
-						</div>
-						<!--item end-->
-						<!--item-->
-						<div class="table-item" data-cat="Retail Arbitrage">
-							<div class="table__col table__col--first">
-								<img src="img/thumb.jpg" alt="thumb" class="table-item__thumb">
-							</div>
-							<div class="table__col table__col--name">
-								<p class="h3">Resource Name Retail Arbitrage</p>
-								<div class="stars">
-									<i class="i-star i-star--full"></i>
-									<i class="i-star i-star--full"></i>
-									<i class="i-star i-star--full"></i>
-									<i class="i-star"></i>
-									<i class="i-star"></i>
-								</div>
-							</div>
-							<div class="table__col table__col--type">Type of the Resource</div>
-							<div class="table__col table__col--language">English, Chinesse and
-								<span class="has-sub">
-									<span>more..</span>
-									<span class="has-sub__sub">English, Chinesse, English, Chinesse, English, Chinesse</span>
-								</span>
-							</div>
-							<div class="table__col table__col--marketplace">
-								<div class="flags">
-									<img src="img/flags/china.jpg" alt="China" title="China">
-									<img src="img/flags/greece.jpg" alt="Greece" title="Greece">
-									<img src="img/flags/spain.jpg" alt="Spain" title="Spain">
-									<img src="img/flags/sweden.jpg" alt="Sweden" title="Sweden">
-									<img src="img/flags/united-kingdom.jpg" alt="United-kingdom" title="United-kingdom">
-									<img src="img/flags/russia.jpg" alt="Russia" title="Russia">
-								</div>
-							</div>
-						</div>
-						<!--item end-->
-						<!--item-->
-						<div class="table-item" data-cat="Retail Arbitrage">
-							<div class="table__col table__col--first">
-								<img src="img/thumb.jpg" alt="thumb" class="table-item__thumb">
-							</div>
-							<div class="table__col table__col--name">
-								<p class="h3">Resource Name Retail Arbitrage</p>
-								<div class="stars">
-									<i class="i-star i-star--full"></i>
-									<i class="i-star i-star--full"></i>
-									<i class="i-star i-star--full"></i>
-									<i class="i-star"></i>
-									<i class="i-star"></i>
-								</div>
-							</div>
-							<div class="table__col table__col--type">Type of the Resource</div>
-							<div class="table__col table__col--language">English, Chinesse and
-								<span class="has-sub">
-									<span>more..</span>
-									<span class="has-sub__sub">English, Chinesse, English, Chinesse, English, Chinesse</span>
-								</span>
-							</div>
-							<div class="table__col table__col--marketplace">
-								<div class="flags">
-									<img src="img/flags/china.jpg" alt="China" title="China">
-									<img src="img/flags/greece.jpg" alt="Greece" title="Greece">
-									<img src="img/flags/spain.jpg" alt="Spain" title="Spain">
-									<img src="img/flags/sweden.jpg" alt="Sweden" title="Sweden">
-									<img src="img/flags/united-kingdom.jpg" alt="United-kingdom" title="United-kingdom">
-									<img src="img/flags/russia.jpg" alt="Russia" title="Russia">
-								</div>
-							</div>
-						</div>
-						<!--item end-->
-						<!--item-->
-						<div class="table-item" data-cat="Wholesale">
-							<div class="table__col table__col--first">
-								<img src="img/thumb.jpg" alt="thumb" class="table-item__thumb">
-							</div>
-							<div class="table__col table__col--name">
-								<p class="h3">Resource Name Wholesale</p>
-								<div class="stars">
-									<i class="i-star i-star--full"></i>
-									<i class="i-star i-star--full"></i>
-									<i class="i-star i-star--full"></i>
-									<i class="i-star"></i>
-									<i class="i-star"></i>
-								</div>
-							</div>
-							<div class="table__col table__col--type">Type of the Resource</div>
-							<div class="table__col table__col--language">English, Chinesse and
-								<span class="has-sub">
-									<span>more..</span>
-									<span class="has-sub__sub">English, Chinesse, English, Chinesse, English, Chinesse</span>
-								</span>
-							</div>
-							<div class="table__col table__col--marketplace">
-								<div class="flags">
-									<img src="img/flags/china.jpg" alt="China" title="China">
-									<img src="img/flags/greece.jpg" alt="Greece" title="Greece">
-									<img src="img/flags/spain.jpg" alt="Spain" title="Spain">
-									<img src="img/flags/sweden.jpg" alt="Sweden" title="Sweden">
-									<img src="img/flags/united-kingdom.jpg" alt="United-kingdom" title="United-kingdom">
-									<img src="img/flags/russia.jpg" alt="Russia" title="Russia">
-								</div>
-							</div>
-						</div>
-						<!--item end-->
-						<!--item-->
-						<div class="table-item" data-cat="Private Label">
-							<div class="table__col table__col--first">
-								<img src="img/thumb.jpg" alt="thumb" class="table-item__thumb">
-							</div>
-							<div class="table__col table__col--name">
-								<p class="h3">Resource Name Private Label</p>
-								<div class="stars">
-									<i class="i-star i-star--full"></i>
-									<i class="i-star i-star--full"></i>
-									<i class="i-star i-star--full"></i>
-									<i class="i-star"></i>
-									<i class="i-star"></i>
-								</div>
-							</div>
-							<div class="table__col table__col--type">Type of the Resource</div>
-							<div class="table__col table__col--language">English, Chinesse and
-								<span class="has-sub">
-									<span>more..</span>
-									<span class="has-sub__sub">English, Chinesse, English, Chinesse, English, Chinesse</span>
-								</span>
-							</div>
-							<div class="table__col table__col--marketplace">
-								<div class="flags">
-									<img src="img/flags/china.jpg" alt="China" title="China">
-									<img src="img/flags/greece.jpg" alt="Greece" title="Greece">
-									<img src="img/flags/spain.jpg" alt="Spain" title="Spain">
-									<img src="img/flags/sweden.jpg" alt="Sweden" title="Sweden">
-									<img src="img/flags/united-kingdom.jpg" alt="United-kingdom" title="United-kingdom">
-									<img src="img/flags/russia.jpg" alt="Russia" title="Russia">
-								</div>
-							</div>
-						</div>
-						<!--item end-->
-						<!--item-->
-						<div class="table-item" data-cat="Retail Arbitrage">
-							<div class="table__col table__col--first">
-								<img src="img/thumb.jpg" alt="thumb" class="table-item__thumb">
-							</div>
-							<div class="table__col table__col--name">
-								<p class="h3">Resource Name Retail Arbitrage</p>
-								<div class="stars">
-									<i class="i-star i-star--full"></i>
-									<i class="i-star i-star--full"></i>
-									<i class="i-star i-star--full"></i>
-									<i class="i-star"></i>
-									<i class="i-star"></i>
-								</div>
-							</div>
-							<div class="table__col table__col--type">Type of the Resource</div>
-							<div class="table__col table__col--language">English, Chinesse and
-								<span class="has-sub">
-									<span>more..</span>
-									<span class="has-sub__sub">English, Chinesse, English, Chinesse, English, Chinesse</span>
-								</span>
-							</div>
-							<div class="table__col table__col--marketplace">
-								<div class="flags">
-									<img src="img/flags/china.jpg" alt="China" title="China">
-									<img src="img/flags/greece.jpg" alt="Greece" title="Greece">
-									<img src="img/flags/spain.jpg" alt="Spain" title="Spain">
-									<img src="img/flags/sweden.jpg" alt="Sweden" title="Sweden">
-									<img src="img/flags/united-kingdom.jpg" alt="United-kingdom" title="United-kingdom">
-									<img src="img/flags/russia.jpg" alt="Russia" title="Russia">
-								</div>
-							</div>
-						</div>
-						<!--item end-->
-						<!--item-->
-						<div class="table-item" data-cat="Retail Arbitrage">
-							<div class="table__col table__col--first">
-								<img src="img/thumb.jpg" alt="thumb" class="table-item__thumb">
-							</div>
-							<div class="table__col table__col--name">
-								<p class="h3">Resource Name Retail Arbitrage</p>
-								<div class="stars">
-									<i class="i-star i-star--full"></i>
-									<i class="i-star i-star--full"></i>
-									<i class="i-star i-star--full"></i>
-									<i class="i-star"></i>
-									<i class="i-star"></i>
-								</div>
-							</div>
-							<div class="table__col table__col--type">Type of the Resource</div>
-							<div class="table__col table__col--language">English, Chinesse and
-								<span class="has-sub">
-									<span>more..</span>
-									<span class="has-sub__sub">English, Chinesse, English, Chinesse, English, Chinesse</span>
-								</span>
-							</div>
-							<div class="table__col table__col--marketplace">
-								<div class="flags">
-									<img src="img/flags/china.jpg" alt="China" title="China">
-									<img src="img/flags/greece.jpg" alt="Greece" title="Greece">
-									<img src="img/flags/spain.jpg" alt="Spain" title="Spain">
-									<img src="img/flags/sweden.jpg" alt="Sweden" title="Sweden">
-									<img src="img/flags/united-kingdom.jpg" alt="United-kingdom" title="United-kingdom">
-									<img src="img/flags/russia.jpg" alt="Russia" title="Russia">
-								</div>
-							</div>
-						</div>
-						<!--item end-->
-						<!--item-->
-						<div class="table-item" data-cat="Wholesale">
-							<div class="table__col table__col--first">
-								<img src="img/thumb.jpg" alt="thumb" class="table-item__thumb">
-							</div>
-							<div class="table__col table__col--name">
-								<p class="h3">Resource Name Wholesale</p>
-								<div class="stars">
-									<i class="i-star i-star--full"></i>
-									<i class="i-star i-star--full"></i>
-									<i class="i-star i-star--full"></i>
-									<i class="i-star"></i>
-									<i class="i-star"></i>
-								</div>
-							</div>
-							<div class="table__col table__col--type">Type of the Resource</div>
-							<div class="table__col table__col--language">English, Chinesse and
-								<span class="has-sub">
-									<span>more..</span>
-									<span class="has-sub__sub">English, Chinesse, English, Chinesse, English, Chinesse</span>
-								</span>
-							</div>
-							<div class="table__col table__col--marketplace">
-								<div class="flags">
-									<img src="img/flags/china.jpg" alt="China" title="China">
-									<img src="img/flags/greece.jpg" alt="Greece" title="Greece">
-									<img src="img/flags/spain.jpg" alt="Spain" title="Spain">
-									<img src="img/flags/sweden.jpg" alt="Sweden" title="Sweden">
-									<img src="img/flags/united-kingdom.jpg" alt="United-kingdom" title="United-kingdom">
-									<img src="img/flags/russia.jpg" alt="Russia" title="Russia">
+							<div class="modal">
+								<div class="modal__wrap">
+									<div class="modal__thumb">
+										<img src="img/thumb-modal.jpg" alt="thumb">
+									</div>
+									<div class="modal__content">
+										<p class="modal__title">Resource Name</p>
+										<div class="stars">
+											<i class="i-star i-star--full"></i>
+											<i class="i-star i-star--full"></i>
+											<i class="i-star i-star--full"></i>
+											<i class="i-star"></i>
+											<i class="i-star"></i>
+										</div>
+										<p class="modal__type">Type of the Resource</p>
+										<p class="modal__descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectet</p>
+										<div class="modal__param">
+											<span>Languages:</span>
+											<div>English, Chinesse, Franch, Russian</div>
+										</div>
+										<div class="modal__param">
+											<span>Marketplace:</span>
+											<div class="flags">
+												<img src="img/flags/china.jpg" alt="China" title="China">
+												<img src="img/flags/greece.jpg" alt="Greece" title="Greece">
+												<img src="img/flags/spain.jpg" alt="Spain" title="Spain">
+												<img src="img/flags/sweden.jpg" alt="Sweden" title="Sweden">
+												<img src="img/flags/united-kingdom.jpg" alt="United-kingdom" title="United-kingdom">
+												<img src="img/flags/russia.jpg" alt="Russia" title="Russia">
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -553,14 +535,14 @@
 				<div class="table">
 					<div class="table__head">
 						<div class="table__col table__col--first"><i class="i-sort"></i>Sort by:</div>
-						<div class="table__col table__col--name" data-sort="simple">Name <i class="i-updown"></i></div>
+						<div class="table__col table__col--name" data-col="name" data-sort="string" data-asc="true">Name <i class="i-updown"></i></div>
 						<div class="table__col table__col--description">Description</div>
-						<div class="table__col table__col--for" data-sort="simple">Marketplace <i class="i-updown"></i></div>
-						<div class="table__col table__col--price" data-sort="simple">Price <i class="i-updown"></i></div>
+						<div class="table__col table__col--for" data-col="marketplace" data-sort="string" data-asc="true">Marketplace <i class="i-updown"></i></div>
+						<div class="table__col table__col--price" data-col="price" data-sort="number" data-asc="true">Price <i class="i-updown"></i></div>
 					</div>
 					<div class="table__content">
 						<!--item-->
-						<div class="table-item" data-cat="Product research">
+						<div class="table-item" data-cat="Product research" data-name="Product research" data-marketplace="B2C" data-price="19">
 							<div class="table__col table__col--first">
 								<img src="img/thumb.jpg" alt="thumb" class="table-item__thumb">
 							</div>
@@ -576,6 +558,627 @@
 							</div>
 							<div class="table__col table__col--description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</div>
 							<div class="table__col table__col--for">B2C</div>
+							<div class="table__col table__col--price">
+								<div class="price">$19<sup>99</sup> - 39<sup>99</sup></div>
+							</div>
+							<div class="modal">
+								<div class="modal__wrap">
+									<div class="modal__thumb">
+										<img src="img/thumb-modal.jpg" alt="thumb">
+									</div>
+									<div class="modal__content">
+										<p class="modal__title">Resource Name</p>
+										<div class="stars">
+											<i class="i-star i-star--full"></i>
+											<i class="i-star i-star--full"></i>
+											<i class="i-star i-star--full"></i>
+											<i class="i-star"></i>
+											<i class="i-star"></i>
+										</div>
+										<p class="modal__descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectet</p>
+										<div class="modal__param">
+											<span>Marketplace:</span>
+											<div>B2C</div>
+										</div>
+										<div class="modal__param">
+											<span>Price:</span>
+											<div class="price">$19<sup>99</sup> - 39<sup>99</sup></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--item end-->
+						<!--item-->
+						<div class="table-item" data-cat="Listing optimization" data-name="AAA" data-marketplace="B2B" data-price="181">
+							<div class="table__col table__col--first">
+								<img src="img/thumb.jpg" alt="thumb" class="table-item__thumb">
+							</div>
+							<div class="table__col table__col--name">
+								<p class="h3">AAA</p>
+								<div class="stars">
+									<i class="i-star i-star--full"></i>
+									<i class="i-star i-star--full"></i>
+									<i class="i-star i-star--full"></i>
+									<i class="i-star"></i>
+									<i class="i-star"></i>
+								</div>
+							</div>
+							<div class="table__col table__col--description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</div>
+							<div class="table__col table__col--for">B2B</div>
+							<div class="table__col table__col--price">
+								<div class="price">$181</div>
+							</div>
+							<div class="modal">
+								<div class="modal__wrap">
+									<div class="modal__thumb">
+										<img src="img/thumb-modal.jpg" alt="thumb">
+									</div>
+									<div class="modal__content">
+										<p class="modal__title">Resource Name</p>
+										<div class="stars">
+											<i class="i-star i-star--full"></i>
+											<i class="i-star i-star--full"></i>
+											<i class="i-star i-star--full"></i>
+											<i class="i-star"></i>
+											<i class="i-star"></i>
+										</div>
+										<p class="modal__descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectet</p>
+										<div class="modal__param">
+											<span>Marketplace:</span>
+											<div>B2C</div>
+										</div>
+										<div class="modal__param">
+											<span>Price:</span>
+											<div class="price">$19<sup>99</sup> - 39<sup>99</sup></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--item end-->
+						<!--item-->
+						<div class="table-item" data-cat="Tracking" data-name="Product research" data-marketplace="B2C" data-price="19">
+							<div class="table__col table__col--first">
+								<img src="img/thumb.jpg" alt="thumb" class="table-item__thumb">
+							</div>
+							<div class="table__col table__col--name">
+								<p class="h3">Product research</p>
+								<div class="stars">
+									<i class="i-star i-star--full"></i>
+									<i class="i-star i-star--full"></i>
+									<i class="i-star i-star--full"></i>
+									<i class="i-star"></i>
+									<i class="i-star"></i>
+								</div>
+							</div>
+							<div class="table__col table__col--description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</div>
+							<div class="table__col table__col--for">B2C</div>
+							<div class="table__col table__col--price">
+								<div class="price">$19<sup>99</sup> - 39<sup>99</sup></div>
+							</div>
+							<div class="modal">
+								<div class="modal__wrap">
+									<div class="modal__thumb">
+										<img src="img/thumb-modal.jpg" alt="thumb">
+									</div>
+									<div class="modal__content">
+										<p class="modal__title">Resource Name</p>
+										<div class="stars">
+											<i class="i-star i-star--full"></i>
+											<i class="i-star i-star--full"></i>
+											<i class="i-star i-star--full"></i>
+											<i class="i-star"></i>
+											<i class="i-star"></i>
+										</div>
+										<p class="modal__descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectet</p>
+										<div class="modal__param">
+											<span>Marketplace:</span>
+											<div>B2C</div>
+										</div>
+										<div class="modal__param">
+											<span>Price:</span>
+											<div class="price">$19<sup>99</sup> - 39<sup>99</sup></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--item end-->
+						<!--item-->
+						<div class="table-item" data-cat="Accounting" data-name="AAA" data-marketplace="B2B" data-price="181">
+							<div class="table__col table__col--first">
+								<img src="img/thumb.jpg" alt="thumb" class="table-item__thumb">
+							</div>
+							<div class="table__col table__col--name">
+								<p class="h3">AAA</p>
+								<div class="stars">
+									<i class="i-star i-star--full"></i>
+									<i class="i-star i-star--full"></i>
+									<i class="i-star i-star--full"></i>
+									<i class="i-star"></i>
+									<i class="i-star"></i>
+								</div>
+							</div>
+							<div class="table__col table__col--description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</div>
+							<div class="table__col table__col--for">B2B</div>
+							<div class="table__col table__col--price">
+								<div class="price">$181</div>
+							</div>
+							<div class="modal">
+								<div class="modal__wrap">
+									<div class="modal__thumb">
+										<img src="img/thumb-modal.jpg" alt="thumb">
+									</div>
+									<div class="modal__content">
+										<p class="modal__title">Resource Name</p>
+										<div class="stars">
+											<i class="i-star i-star--full"></i>
+											<i class="i-star i-star--full"></i>
+											<i class="i-star i-star--full"></i>
+											<i class="i-star"></i>
+											<i class="i-star"></i>
+										</div>
+										<p class="modal__descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectet</p>
+										<div class="modal__param">
+											<span>Marketplace:</span>
+											<div>B2C</div>
+										</div>
+										<div class="modal__param">
+											<span>Price:</span>
+											<div class="price">$19<sup>99</sup> - 39<sup>99</sup></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--item end-->
+					</div>
+					<button class="table__more">CLICK FOR MORE <span></span></button>
+				</div>
+			</main>
+
+		</div>
+
+	</div>
+</section>
+
+
+<section class="s-main" id="consultants">
+	<div class="container">
+		<p class="h2 s-main__title">Consultants</p>
+
+		<div class="main-block">
+			<aside class="main-block__aside">
+				<div class="cats">
+					<div class="cats__title"><i class="i-catalog"></i>Select Category</div>
+					<ul class="cats__list">
+						<li data-cat="*" class="active">All</li>
+						<li data-cat="All fba cycle">All fba cycle</li>
+						<li data-cat="Listing optimization marketing">Listing optimization marketing</li>
+						<li data-cat="Taxes">Taxes</li>
+						<li data-cat="Legal issues">Legal issues</li>
+					</ul>
+				</div>
+			</aside>
+
+			<main class="main-block__main">
+				<div class="table">
+					<div class="table__head">
+						<div class="table__col table__col--first"><i class="i-sort"></i>Sort by:</div>
+						<div class="table__col table__col--name" data-col="name" data-sort="string" data-asc="true">Name <i class="i-updown"></i></div>
+						<div class="table__col table__col--language">
+							Language
+							<select class="style-select" title="select language" data-language>
+								<option disabled selected>Default</option>
+								<option>English</option>
+								<option>Germany</option>
+							</select>
+						</div>
+						<div class="table__col table__col--for" data-col="marketplace" data-sort="string" data-asc="true">Marketplace <i class="i-updown"></i></div>
+						<div class="table__col table__col--price" data-col="price" data-sort="number" data-asc="true">Price <i class="i-updown"></i></div>
+					</div>
+					<div class="table__content">
+						<!--item-->
+						<div class="table-item" data-cat="All fba cycle" data-name="Product research" data-marketplace="B2C" data-price="19" data-language="english">
+							<div class="table__col table__col--first">
+								<img src="img/thumb.jpg" alt="thumb" class="table-item__thumb">
+							</div>
+							<div class="table__col table__col--name">
+								<p class="h3">Product research</p>
+								<div class="stars">
+									<i class="i-star i-star--full"></i>
+									<i class="i-star i-star--full"></i>
+									<i class="i-star i-star--full"></i>
+									<i class="i-star"></i>
+									<i class="i-star"></i>
+								</div>
+							</div>
+							<div class="table__col table__col--language">English</div>
+							<div class="table__col table__col--for">B2C</div>
+							<div class="table__col table__col--price">
+								<div class="price">$19<sup>99</sup> - 39<sup>99</sup></div>
+							</div>
+							<div class="modal">
+								<div class="modal__wrap">
+									<div class="modal__thumb">
+										<img src="img/thumb-modal.jpg" alt="thumb">
+									</div>
+									<div class="modal__content">
+										<p class="modal__title">Resource Name</p>
+										<div class="stars">
+											<i class="i-star i-star--full"></i>
+											<i class="i-star i-star--full"></i>
+											<i class="i-star i-star--full"></i>
+											<i class="i-star"></i>
+											<i class="i-star"></i>
+										</div>
+										<p class="modal__descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectet</p>
+										<div class="modal__param">
+											<span>Marketplace:</span>
+											<div>B2C</div>
+										</div>
+										<div class="modal__param">
+											<span>Price:</span>
+											<div class="price">$19<sup>99</sup> - 39<sup>99</sup></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--item end-->
+						<!--item-->
+						<div class="table-item" data-cat="Listing optimization marketing" data-name="Product research" data-marketplace="B2C" data-price="19" data-language="Germany">
+							<div class="table__col table__col--first">
+								<img src="img/thumb.jpg" alt="thumb" class="table-item__thumb">
+							</div>
+							<div class="table__col table__col--name">
+								<p class="h3">Product research</p>
+								<div class="stars">
+									<i class="i-star i-star--full"></i>
+									<i class="i-star i-star--full"></i>
+									<i class="i-star i-star--full"></i>
+									<i class="i-star"></i>
+									<i class="i-star"></i>
+								</div>
+							</div>
+							<div class="table__col table__col--language">Germany</div>
+							<div class="table__col table__col--for">B2C</div>
+							<div class="table__col table__col--price">
+								<div class="price">$19<sup>99</sup> - 39<sup>99</sup></div>
+							</div>
+							<div class="modal">
+								<div class="modal__wrap">
+									<div class="modal__thumb">
+										<img src="img/thumb-modal.jpg" alt="thumb">
+									</div>
+									<div class="modal__content">
+										<p class="modal__title">Resource Name</p>
+										<div class="stars">
+											<i class="i-star i-star--full"></i>
+											<i class="i-star i-star--full"></i>
+											<i class="i-star i-star--full"></i>
+											<i class="i-star"></i>
+											<i class="i-star"></i>
+										</div>
+										<p class="modal__descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectet</p>
+										<div class="modal__param">
+											<span>Marketplace:</span>
+											<div>B2C</div>
+										</div>
+										<div class="modal__param">
+											<span>Price:</span>
+											<div class="price">$19<sup>99</sup> - 39<sup>99</sup></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--item end-->
+						<!--item-->
+						<div class="table-item" data-cat="All fba cycle" data-name="Product research" data-marketplace="B2C" data-price="19" data-language="english">
+							<div class="table__col table__col--first">
+								<img src="img/thumb.jpg" alt="thumb" class="table-item__thumb">
+							</div>
+							<div class="table__col table__col--name">
+								<p class="h3">Product research</p>
+								<div class="stars">
+									<i class="i-star i-star--full"></i>
+									<i class="i-star i-star--full"></i>
+									<i class="i-star i-star--full"></i>
+									<i class="i-star"></i>
+									<i class="i-star"></i>
+								</div>
+							</div>
+							<div class="table__col table__col--language">English</div>
+							<div class="table__col table__col--for">B2C</div>
+							<div class="table__col table__col--price">
+								<div class="price">$19<sup>99</sup> - 39<sup>99</sup></div>
+							</div>
+							<div class="modal">
+								<div class="modal__wrap">
+									<div class="modal__thumb">
+										<img src="img/thumb-modal.jpg" alt="thumb">
+									</div>
+									<div class="modal__content">
+										<p class="modal__title">Resource Name</p>
+										<div class="stars">
+											<i class="i-star i-star--full"></i>
+											<i class="i-star i-star--full"></i>
+											<i class="i-star i-star--full"></i>
+											<i class="i-star"></i>
+											<i class="i-star"></i>
+										</div>
+										<p class="modal__descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectet</p>
+										<div class="modal__param">
+											<span>Marketplace:</span>
+											<div>B2C</div>
+										</div>
+										<div class="modal__param">
+											<span>Price:</span>
+											<div class="price">$19<sup>99</sup> - 39<sup>99</sup></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--item end-->
+						<!--item-->
+						<div class="table-item" data-cat="Listing optimization marketing" data-name="Product research" data-marketplace="B2C" data-price="19" data-language="Germany">
+							<div class="table__col table__col--first">
+								<img src="img/thumb.jpg" alt="thumb" class="table-item__thumb">
+							</div>
+							<div class="table__col table__col--name">
+								<p class="h3">Product research</p>
+								<div class="stars">
+									<i class="i-star i-star--full"></i>
+									<i class="i-star i-star--full"></i>
+									<i class="i-star i-star--full"></i>
+									<i class="i-star"></i>
+									<i class="i-star"></i>
+								</div>
+							</div>
+							<div class="table__col table__col--language">Germany</div>
+							<div class="table__col table__col--for">B2C</div>
+							<div class="table__col table__col--price">
+								<div class="price">$19<sup>99</sup> - 39<sup>99</sup></div>
+							</div>
+							<div class="modal">
+								<div class="modal__wrap">
+									<div class="modal__thumb">
+										<img src="img/thumb-modal.jpg" alt="thumb">
+									</div>
+									<div class="modal__content">
+										<p class="modal__title">Resource Name</p>
+										<div class="stars">
+											<i class="i-star i-star--full"></i>
+											<i class="i-star i-star--full"></i>
+											<i class="i-star i-star--full"></i>
+											<i class="i-star"></i>
+											<i class="i-star"></i>
+										</div>
+										<p class="modal__descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectet</p>
+										<div class="modal__param">
+											<span>Marketplace:</span>
+											<div>B2C</div>
+										</div>
+										<div class="modal__param">
+											<span>Price:</span>
+											<div class="price">$19<sup>99</sup> - 39<sup>99</sup></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--item end-->
+					</div>
+					<button class="table__more">CLICK FOR MORE <span></span></button>
+				</div>
+			</main>
+
+		</div>
+
+	</div>
+</section>
+
+
+<section class="s-main" id="services">
+	<div class="container">
+		<p class="h2 s-main__title">Services</p>
+
+		<div class="main-block">
+			<aside class="main-block__aside">
+				<div class="cats">
+					<div class="cats__title"><i class="i-catalog"></i>Select Category</div>
+					<ul class="cats__list">
+						<li data-cat="*" class="active">All</li>
+						<li data-cat="All fba cycle">All fba cycle</li>
+						<li data-cat="Looking for suppliers">Looking for suppliers</li>
+						<li data-cat="Shipping, inspections">Shipping, inspections</li>
+						<li data-cat="Brokers">Brokers</li>
+						<li data-cat="Taxes">Taxes</li>
+						<li data-cat="Photos">Photos</li>
+						<li data-cat="Listings">Listings</li>
+						<li data-cat="Marketing">Marketing</li>
+						<li data-cat="Branding">Branding</li>
+						<li data-cat="Websites">Websites</li>
+					</ul>
+				</div>
+			</aside>
+
+			<main class="main-block__main">
+				<div class="table">
+					<div class="table__head">
+						<div class="table__col table__col--first"><i class="i-sort"></i>Sort by:</div>
+						<div class="table__col table__col--name" data-col="name" data-sort="string" data-asc="true">Name <i class="i-updown"></i></div>
+						<div class="table__col table__col--language">
+							Language
+							<select class="style-select" title="select language" data-language>
+								<option disabled selected>Default</option>
+								<option>English</option>
+								<option>Germany</option>
+							</select>
+						</div>
+						<div class="table__col table__col--price" data-col="price" data-sort="number" data-asc="true">Price <i class="i-updown"></i></div>
+					</div>
+					<div class="table__content">
+						<!--item-->
+						<div class="table-item" data-cat="All fba cycle" data-name="Product research" data-price="19" data-language="english">
+							<div class="table__col table__col--first">
+								<img src="img/thumb.jpg" alt="thumb" class="table-item__thumb">
+							</div>
+							<div class="table__col table__col--name">
+								<p class="h3">Product research</p>
+								<div class="stars">
+									<i class="i-star i-star--full"></i>
+									<i class="i-star i-star--full"></i>
+									<i class="i-star i-star--full"></i>
+									<i class="i-star"></i>
+									<i class="i-star"></i>
+								</div>
+							</div>
+							<div class="table__col table__col--language">English</div>
+							<div class="table__col table__col--price">
+								<div class="price">$19<sup>99</sup> - 39<sup>99</sup></div>
+							</div>
+							<div class="modal">
+								<div class="modal__wrap">
+									<div class="modal__thumb">
+										<img src="img/thumb-modal.jpg" alt="thumb">
+									</div>
+									<div class="modal__content">
+										<p class="modal__title">Resource Name</p>
+										<div class="stars">
+											<i class="i-star i-star--full"></i>
+											<i class="i-star i-star--full"></i>
+											<i class="i-star i-star--full"></i>
+											<i class="i-star"></i>
+											<i class="i-star"></i>
+										</div>
+										<p class="modal__descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectet</p>
+										<div class="modal__param">
+											<span>Marketplace:</span>
+											<div>B2C</div>
+										</div>
+										<div class="modal__param">
+											<span>Price:</span>
+											<div class="price">$19<sup>99</sup> - 39<sup>99</sup></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--item end-->
+						<!--item-->
+						<div class="table-item" data-cat="Listing optimization marketing" data-name="Product research" data-price="19" data-language="Germany">
+							<div class="table__col table__col--first">
+								<img src="img/thumb.jpg" alt="thumb" class="table-item__thumb">
+							</div>
+							<div class="table__col table__col--name">
+								<p class="h3">Product research</p>
+								<div class="stars">
+									<i class="i-star i-star--full"></i>
+									<i class="i-star i-star--full"></i>
+									<i class="i-star i-star--full"></i>
+									<i class="i-star"></i>
+									<i class="i-star"></i>
+								</div>
+							</div>
+							<div class="table__col table__col--language">Germany</div>
+							<div class="table__col table__col--price">
+								<div class="price">$19<sup>99</sup> - 39<sup>99</sup></div>
+							</div>
+							<div class="modal">
+								<div class="modal__wrap">
+									<div class="modal__thumb">
+										<img src="img/thumb-modal.jpg" alt="thumb">
+									</div>
+									<div class="modal__content">
+										<p class="modal__title">Resource Name</p>
+										<div class="stars">
+											<i class="i-star i-star--full"></i>
+											<i class="i-star i-star--full"></i>
+											<i class="i-star i-star--full"></i>
+											<i class="i-star"></i>
+											<i class="i-star"></i>
+										</div>
+										<p class="modal__descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectet</p>
+										<div class="modal__param">
+											<span>Marketplace:</span>
+											<div>B2C</div>
+										</div>
+										<div class="modal__param">
+											<span>Price:</span>
+											<div class="price">$19<sup>99</sup> - 39<sup>99</sup></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--item end-->
+						<!--item-->
+						<div class="table-item" data-cat="All fba cycle" data-name="Product research" data-price="19" data-language="english">
+							<div class="table__col table__col--first">
+								<img src="img/thumb.jpg" alt="thumb" class="table-item__thumb">
+							</div>
+							<div class="table__col table__col--name">
+								<p class="h3">Product research</p>
+								<div class="stars">
+									<i class="i-star i-star--full"></i>
+									<i class="i-star i-star--full"></i>
+									<i class="i-star i-star--full"></i>
+									<i class="i-star"></i>
+									<i class="i-star"></i>
+								</div>
+							</div>
+							<div class="table__col table__col--language">English</div>
+							<div class="table__col table__col--price">
+								<div class="price">$19<sup>99</sup> - 39<sup>99</sup></div>
+							</div>
+							<div class="modal">
+								<div class="modal__wrap">
+									<div class="modal__thumb">
+										<img src="img/thumb-modal.jpg" alt="thumb">
+									</div>
+									<div class="modal__content">
+										<p class="modal__title">Resource Name</p>
+										<div class="stars">
+											<i class="i-star i-star--full"></i>
+											<i class="i-star i-star--full"></i>
+											<i class="i-star i-star--full"></i>
+											<i class="i-star"></i>
+											<i class="i-star"></i>
+										</div>
+										<p class="modal__descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectet</p>
+										<div class="modal__param">
+											<span>Marketplace:</span>
+											<div>B2C</div>
+										</div>
+										<div class="modal__param">
+											<span>Price:</span>
+											<div class="price">$19<sup>99</sup> - 39<sup>99</sup></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--item end-->
+						<!--item-->
+						<div class="table-item" data-cat="Listing optimization marketing" data-name="Product research" data-price="19" data-language="Germany">
+							<div class="table__col table__col--first">
+								<img src="img/thumb.jpg" alt="thumb" class="table-item__thumb">
+							</div>
+							<div class="table__col table__col--name">
+								<p class="h3">Product research</p>
+								<div class="stars">
+									<i class="i-star i-star--full"></i>
+									<i class="i-star i-star--full"></i>
+									<i class="i-star i-star--full"></i>
+									<i class="i-star"></i>
+									<i class="i-star"></i>
+								</div>
+							</div>
+							<div class="table__col table__col--language">Germany</div>
 							<div class="table__col table__col--price">
 								<div class="price">$19<sup>99</sup> - 39<sup>99</sup></div>
 							</div>

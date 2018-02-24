@@ -859,6 +859,9 @@ li.fancybox-thumbs-loading {
     transition: all 0.2s ease;
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
     width: 200px; }
+    @media (max-width: 768px) {
+      .nice-select .list {
+        width: 140px; } }
     .nice-select .list:hover .option:not(:hover) {
       background-color: transparent !important; }
     .nice-select .list:before {
@@ -1236,6 +1239,9 @@ button::-moz-focus-inner {
 
 .s-main {
   padding: 40px 0; }
+  @media (max-width: 768px) {
+    .s-main {
+      padding: 20px 0; } }
   .s-main__title {
     text-align: center;
     margin-bottom: 0.8em; }
@@ -1337,6 +1343,15 @@ button::-moz-focus-inner {
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none; }
+  @media (max-width: 768px) {
+    .table__head {
+      height: auto;
+      -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+      justify-content: flex-start;
+      -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap; } }
   .table__head .i-sort {
     font-size: 14px;
     margin-right: 5px; }
@@ -1350,13 +1365,34 @@ button::-moz-focus-inner {
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center; }
+    @media (max-width: 768px) {
+      .table__head .table__col {
+        width: auto;
+        padding: 10px;
+        margin-right: 10px;
+        display: none; } }
   .table__head .table__col[data-sort] {
     cursor: pointer;
     transition: color 0.3s ease; }
+    @media (max-width: 768px) {
+      .table__head .table__col[data-sort] {
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex; } }
     .table__head .table__col[data-sort]:hover {
+      color: #ffae00; }
+    .table__head .table__col[data-sort].active {
       color: #ffae00; }
   .table__head .table__col--language .style-select {
     margin-left: 8px; }
+  @media (max-width: 768px) {
+    .table__head .table__col--language {
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-order: 10;
+      -ms-flex-order: 10;
+      order: 10; } }
 
 .table__col {
   padding: 0 8px; }
@@ -1368,6 +1404,10 @@ button::-moz-focus-inner {
     flex-shrink: 0; }
   .table__col--name {
     width: 50%; }
+    .table__col--name .stars {
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center; }
   .table__col--type, .table__col--description {
     width: 40%; }
   .table__col--language {
@@ -1376,10 +1416,32 @@ button::-moz-focus-inner {
     width: 30%; }
   .table__col--for {
     width: 22%;
-    text-align: center; }
+    text-align: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
   .table__col--price {
     width: 30%;
-    text-align: center; }
+    text-align: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+
+@media (max-width: 768px) {
+  .table__content .table__col {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 10px; } }
+
+@media (max-width: 768px) {
+  .table__content .table__col--first {
+    width: 93px; } }
+
+@media (max-width: 768px) {
+  .table__content .flags {
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center; } }
 
 .table-item {
   display: -webkit-flex;
@@ -1392,6 +1454,16 @@ button::-moz-focus-inner {
   border-top: 1px solid #edf1f8;
   cursor: pointer;
   transition: background-color 0.2s ease; }
+  @media (max-width: 768px) {
+    .table-item {
+      padding: 10px 15px 0 15px;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      text-align: center; } }
   .table-item:hover {
     background-color: #edf1f8; }
     .table-item:hover .h3 {
@@ -1430,6 +1502,9 @@ button::-moz-focus-inner {
     line-height: 1.4;
     border-radius: 2px;
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2); }
+    @media (max-width: 768px) {
+      .has-sub__sub {
+        width: 140px; } }
     .has-sub__sub:before {
       content: '';
       position: absolute;
