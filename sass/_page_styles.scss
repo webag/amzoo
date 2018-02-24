@@ -383,7 +383,6 @@
 		@include res(m){
 			display: flex;
 			order: 10;
-			//margin-left: auto;
 		}
 	}
 }
@@ -402,7 +401,9 @@
 	&--name{
 		width: 50%;
 		.stars{
-			justify-content: center;
+			@include res(m){
+				justify-content: center;
+			}
 		}
 	}
 	&--type,&--description{

@@ -1404,10 +1404,11 @@ button::-moz-focus-inner {
     flex-shrink: 0; }
   .table__col--name {
     width: 50%; }
-    .table__col--name .stars {
-      -webkit-justify-content: center;
-      -ms-flex-pack: center;
-      justify-content: center; }
+    @media (max-width: 768px) {
+      .table__col--name .stars {
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center; } }
   .table__col--type, .table__col--description {
     width: 40%; }
   .table__col--language {
