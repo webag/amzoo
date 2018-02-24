@@ -220,13 +220,12 @@
 	display: flex;
 	align-items: flex-start;
 	@include res(l){
-
 		flex-wrap: wrap;
 	}
 
 	&__aside{
 		width: 275px;
-		padding-top: 44px;
+		padding-top: 50px;
 		padding-right: 20px;
 		flex-shrink: 0;
 		@include res(l){
@@ -333,9 +332,8 @@
 .table__head{
 	display: flex;
 	white-space: nowrap;
-	height: 44px;
+	height: 50px;
 	user-select: none;
-	padding-top: 10px;
 
 	.i-sort{
 		font-size: 14px;
@@ -346,11 +344,21 @@
 		margin-left: 3px;
 	}
 
+	.table__col{
+		display: flex;
+		align-items: center;
+	}
+
 	.table__col[data-sort]{
 		cursor: pointer;
 		transition: color 0.3s ease;
 		&:hover{
 			color: $yellow;
+		}
+	}
+	.table__col--language{
+		.style-select{
+			margin-left: 8px;
 		}
 	}
 }
@@ -396,9 +404,23 @@
 	align-items: center;
 	padding: 10px 0;
 	border-top: 1px solid #edf1f8;
+	cursor: pointer;
+	transition: background-color 0.2s ease;
+	
+	&:hover{
+		background-color: #edf1f8;
+
+		.h3{
+			color: $yellow;
+		}
+	}
 
 	&.hidden{
 		display: none;
+	}
+
+	.h3{
+		transition: color 0.2s ease;
 	}
 
 	.stars{
@@ -433,6 +455,8 @@
 		padding: 15px;
 		font-size: 13px;
 		line-height: 1.4;
+		border-radius: 2px;
+		box-shadow: 0 0 5px 0 rgba(0,0,0,0.2);
 
 		&:before{
 			content: '';
@@ -504,6 +528,12 @@
 	color: $yellow;
 	@include res(xl){
 		font-size: 22px;
+	}
+	@include res(l){
+		font-size: 20px;
+	}
+	@include res(m){
+		font-size: 18px;
 	}
 
 	sup{

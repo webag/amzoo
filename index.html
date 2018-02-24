@@ -45,10 +45,10 @@
 			<img src="/img/logo.svg" alt="Logotype" class="top-logo">
 			<nav class="top-nav">
 				<ul>
-					<li><a href="#">Courses </a></li>
-					<li><a href="#">Software</a></li>
-					<li><a href="#">Consultants</a></li>
-					<li><a href="#">Services</a></li>
+					<li><a href="#courses" class="scrollto">Courses </a></li>
+					<li><a href="#software" class="scrollto">Software</a></li>
+					<li><a href="#" class="scrollto">Consultants</a></li>
+					<li><a href="#" class="scrollto">Services</a></li>
 				</ul>
 			</nav>
 			<a href="#" class="btn top-btn">Share your website <i class="i-hare"></i></a>
@@ -70,7 +70,7 @@
 </header>
 
 
-<section class="s-main">
+<section class="s-main" id="courses">
 	<div class="container">
 		<p class="h2 s-main__title">Courses</p>
 
@@ -91,19 +91,94 @@
 				<div class="table">
 					<div class="table__head">
 						<div class="table__col table__col--first"><i class="i-sort"></i>Sort by:</div>
-						<div class="table__col table__col--name" data-sort="simple">Name <i class="i-updown"></i></div>
+						<div class="table__col table__col--name" data-sort="name">Name <i class="i-updown"></i></div>
 						<div class="table__col table__col--type" data-sort="simple">Type <i class="i-updown"></i></div>
-						<div class="table__col table__col--language">Language</div>
+						<div class="table__col table__col--language">
+							Language
+							<select class="style-select" title="select language">
+								<option>Default</option>
+								<option value="1">English</option>
+								<option value="2">Chinesse-Chinesse</option>
+							</select>
+						</div>
 						<div class="table__col table__col--marketplace" data-sort="simple">Marketplace <i class="i-updown"></i></div>
 					</div>
 					<div class="table__content">
 						<!--item-->
-						<div class="table-item" data-cat="Private Label">
+						<div class="table-item" data-cat="Private Label" data-name="Abcd">
 							<div class="table__col table__col--first">
 								<img src="/img/thumb.jpg" alt="thumb" class="table-item__thumb">
 							</div>
 							<div class="table__col table__col--name">
-								<p class="h3">Resource Name Private Label</p>
+								<p class="h3">Abcd</p>
+								<div class="stars">
+									<i class="i-star i-star--full"></i>
+									<i class="i-star i-star--full"></i>
+									<i class="i-star i-star--full"></i>
+									<i class="i-star"></i>
+									<i class="i-star"></i>
+								</div>
+							</div>
+							<div class="table__col table__col--type">Type of the Resource</div>
+							<div class="table__col table__col--language">English, Chinesse and
+								<span class="has-sub">
+									<span>more..</span>
+									<span class="has-sub__sub">English, Chinesse, English, Chinesse, English, Chinesse</span>
+								</span>
+							</div>
+							<div class="table__col table__col--marketplace">
+								<div class="flags">
+									<img src="/img/flags/china.jpg" alt="China" title="China">
+									<img src="/img/flags/greece.jpg" alt="Greece" title="Greece">
+									<img src="/img/flags/spain.jpg" alt="Spain" title="Spain">
+									<img src="/img/flags/sweden.jpg" alt="Sweden" title="Sweden">
+									<img src="/img/flags/united-kingdom.jpg" alt="United-kingdom" title="United-kingdom">
+									<img src="/img/flags/russia.jpg" alt="Russia" title="Russia">
+								</div>
+							</div>
+							<div class="modal">
+								<div class="modal__wrap">
+									<div class="modal__thumb">
+										<img src="/img/thumb-modal.jpg" alt="thumb">
+									</div>
+									<div class="modal__content">
+										<p class="modal__title">Resource Name</p>
+										<div class="stars">
+											<i class="i-star i-star--full"></i>
+											<i class="i-star i-star--full"></i>
+											<i class="i-star i-star--full"></i>
+											<i class="i-star"></i>
+											<i class="i-star"></i>
+										</div>
+										<p class="modal__type">Type of the Resource</p>
+										<p class="modal__descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectet</p>
+										<div class="modal__param">
+											<span>Languages:</span>
+											<div>English, Chinesse, Franch, Russian</div>
+										</div>
+										<div class="modal__param">
+											<span>Marketplace:</span>
+											<div class="flags">
+												<img src="/img/flags/china.jpg" alt="China" title="China">
+												<img src="/img/flags/greece.jpg" alt="Greece" title="Greece">
+												<img src="/img/flags/spain.jpg" alt="Spain" title="Spain">
+												<img src="/img/flags/sweden.jpg" alt="Sweden" title="Sweden">
+												<img src="/img/flags/united-kingdom.jpg" alt="United-kingdom" title="United-kingdom">
+												<img src="/img/flags/russia.jpg" alt="Russia" title="Russia">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--item end-->
+						<!--item-->
+						<div class="table-item" data-cat="Retail Arbitrage" data-name="Bcdf">
+							<div class="table__col table__col--first">
+								<img src="/img/thumb.jpg" alt="thumb" class="table-item__thumb">
+							</div>
+							<div class="table__col table__col--name">
+								<p class="h3">Bcdf</p>
 								<div class="stars">
 									<i class="i-star i-star--full"></i>
 									<i class="i-star i-star--full"></i>
@@ -132,46 +207,12 @@
 						</div>
 						<!--item end-->
 						<!--item-->
-						<div class="table-item" data-cat="Retail Arbitrage">
+						<div class="table-item" data-cat="Retail Arbitrage" data-name="Frgh">
 							<div class="table__col table__col--first">
 								<img src="/img/thumb.jpg" alt="thumb" class="table-item__thumb">
 							</div>
 							<div class="table__col table__col--name">
-								<p class="h3">Resource Name Retail Arbitrage</p>
-								<div class="stars">
-									<i class="i-star i-star--full"></i>
-									<i class="i-star i-star--full"></i>
-									<i class="i-star i-star--full"></i>
-									<i class="i-star"></i>
-									<i class="i-star"></i>
-								</div>
-							</div>
-							<div class="table__col table__col--type">Type of the Resource</div>
-							<div class="table__col table__col--language">English, Chinesse and
-								<span class="has-sub">
-									<span>more..</span>
-									<span class="has-sub__sub">English, Chinesse, English, Chinesse, English, Chinesse</span>
-								</span>
-							</div>
-							<div class="table__col table__col--marketplace">
-								<div class="flags">
-									<img src="/img/flags/china.jpg" alt="China" title="China">
-									<img src="/img/flags/greece.jpg" alt="Greece" title="Greece">
-									<img src="/img/flags/spain.jpg" alt="Spain" title="Spain">
-									<img src="/img/flags/sweden.jpg" alt="Sweden" title="Sweden">
-									<img src="/img/flags/united-kingdom.jpg" alt="United-kingdom" title="United-kingdom">
-									<img src="/img/flags/russia.jpg" alt="Russia" title="Russia">
-								</div>
-							</div>
-						</div>
-						<!--item end-->
-						<!--item-->
-						<div class="table-item" data-cat="Retail Arbitrage">
-							<div class="table__col table__col--first">
-								<img src="/img/thumb.jpg" alt="thumb" class="table-item__thumb">
-							</div>
-							<div class="table__col table__col--name">
-								<p class="h3">Resource Name Retail Arbitrage</p>
+								<p class="h3">Frgh</p>
 								<div class="stars">
 									<i class="i-star i-star--full"></i>
 									<i class="i-star i-star--full"></i>
@@ -482,7 +523,7 @@
 </section>
 
 
-<section class="s-main">
+<section class="s-main" id="software">
 	<div class="container">
 		<p class="h2 s-main__title">Software</p>
 
@@ -538,6 +579,32 @@
 							<div class="table__col table__col--price">
 								<div class="price">$19<sup>99</sup> - 39<sup>99</sup></div>
 							</div>
+							<div class="modal">
+								<div class="modal__wrap">
+									<div class="modal__thumb">
+										<img src="/img/thumb-modal.jpg" alt="thumb">
+									</div>
+									<div class="modal__content">
+										<p class="modal__title">Resource Name</p>
+										<div class="stars">
+											<i class="i-star i-star--full"></i>
+											<i class="i-star i-star--full"></i>
+											<i class="i-star i-star--full"></i>
+											<i class="i-star"></i>
+											<i class="i-star"></i>
+										</div>
+										<p class="modal__descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectet</p>
+										<div class="modal__param">
+											<span>Marketplace:</span>
+											<div>B2C</div>
+										</div>
+										<div class="modal__param">
+											<span>Price:</span>
+											<div class="price">$19<sup>99</sup> - 39<sup>99</sup></div>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
 						<!--item end-->
 					</div>
@@ -560,6 +627,7 @@
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="js/jquery.fancybox.min.js"></script>
+	<script src="js/jquery.nice-select.min.js"></script>
 	<script src="js/main.js" type="text/javascript"></script>
 </body>
 </html>

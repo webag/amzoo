@@ -42,4 +42,7 @@ h3,.h3{
 	@include res(l){
 		font-size: 17px;
 	}
+	@include res(m){
+		font-size: 14px;
+	}
 }
